@@ -1,0 +1,35 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">
+
+    &nbsp;Suyash Sonawane
+  </a>
+
+  <div>
+    <button routerLink="/new/transaction/pending" class="btn btn-outline-light" *ngIf="thereArePendingTransactions()">
+      Pending transactions
+      <span class="badge badge-light">{{blockchain.pendingTransactions.length}}</span>
+    </button>
+    &nbsp;
+    <a href="https://suyash.ml" target="_blank" style="color: initial;"><button
+        class="btn btn-outline-light">Portfolio</button></a> &nbsp;
+    <button routerLink="/settings" class="btn btn-outline-light">
+      Settings
+    </button>
+    &nbsp;
+    <button routerLink="/new/transaction" class="btn btn-outline-light">
+      Create transaction
+    </button>
+  </div>
+</nav>
+
+<br>
+
+
+<router-outlet></router-outlet>
+
+<footer class="text-muted text-center" style="margin-top: 150px;">
+  <small>For educational purposes only.<br>
+    <a href="https://www.youtube.com/playlist?list=PLzvRQMJ9HDiTqZmbtFisdXFxul5k0F-Q4" target="_blank">Thanks to Savjee
+      for Great Implementation
+      Videos</a></small>
+</footer>
